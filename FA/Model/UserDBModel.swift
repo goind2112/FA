@@ -15,9 +15,6 @@ struct UserDB: Identifiable, Hashable {
     var growthUser: String
     var physicalActivityUser: degreeOfPhysicalActivity.RawValue
     var genderUser: sex.RawValue
-    //    var CalorieIntakeToMaintainWeight: String
-    //    var CalorieIntakeForWeightLoss: String
-    //    var CalorieIntakeForFastWeightIoss: String
     
     
     var representationUserDB: [String: Any] {

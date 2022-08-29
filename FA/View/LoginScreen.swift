@@ -17,17 +17,14 @@ struct LoginScreen: View {
         GeometryReader { _ in
             VStack() {
                 ZStack {
-                    // View справа
                     Singup(index: self.$index)
                         .zIndex(Double(self.index))
-                    // Логотип
                     Image ("Logo")
                         .resizable()
                         .clipShape(Circle())
                         .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 5)
                         .frame (width: 50, height: 50)
                         .padding(.bottom, 350)
-                    // View слева
                     Login(index: self.$index)
                 }
                 // To do:
@@ -119,7 +116,6 @@ struct Login: View {
                     Spacer()
                     
                 }.padding(.top, 30)
-                // поле для ввода Email
                 VStack {
                     HStack(spacing: 15) {
                         Image (systemName: "envelope.fill")
@@ -133,7 +129,6 @@ struct Login: View {
                         .background(Color.white.opacity(0.5))
                 }.padding(.horizontal)
                     .padding(.top, 40)
-                // поле для ввода Password
                 VStack {
                     HStack(spacing: 15) {
                         Button {
@@ -156,13 +151,14 @@ struct Login: View {
                         .background(Color.white.opacity(0.5))
                 }.padding(.horizontal)
                     .padding(.top, 30)
+                // to do:
                 // забыли пароль ?
                 HStack {
                     Spacer(minLength: 0)
                     Button(action: {
                         //
                     }){
-                        Text("Забыли пароль ?")
+                        Text("")
                             .foregroundColor(Color.white.opacity(0.6))
                     }
                 }.padding(.horizontal)
@@ -248,7 +244,6 @@ struct Singup: View {
                 
                 VStack {
                     HStack (spacing: 15) {
-                        //Поле для ввода Email
                         Image(systemName: "envelope.fill")
                             .foregroundColor(.white)
                         TextField("Email Address",text: self.$email)
@@ -259,7 +254,6 @@ struct Singup: View {
                 .padding(.horizontal)
                 .padding(.top, 40)
                 
-                //Поле для ввода Password
                 VStack {
                     HStack(spacing: 15){
                         Button {
@@ -281,7 +275,7 @@ struct Singup: View {
                         .background(Color.white.opacity(0.5))
                 } .padding(.horizontal)
                     .padding(.top, 30)
-                //Поле для ввода Repass
+                
                 VStack {
                     HStack (spacing: 15) {
                         Button {
@@ -340,7 +334,7 @@ struct Singup: View {
                         }
                     }
             }){
-                Text ("SIGNUP")
+                Text ("SINGUP")
                     .foregroundColor(.gray)
                     .fontWeight(.bold)
                     .padding(.vertical)

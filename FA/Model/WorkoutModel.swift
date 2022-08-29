@@ -6,18 +6,10 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct WorkoutModel: Identifiable{
-    var id: String = UUID().uuidString
-    var name: String
-    var exerciseWorkoutModel = [Exercise]()
-    
-    var representationWorkoutModel: [String: Any] {
-        var repres = [String: Any] ()
-        repres["id"] = id
-        repres["name"] = name
-        
-        return repres
-    }
+class WorkoutModel: Object, ObjectKeyIdentifiable{
+    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var name = ""
 }
 

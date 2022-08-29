@@ -11,24 +11,26 @@ struct MainTadView: View {
     
     @StateObject var viewModelUser: AccauntViewSettingsViewModel
     @StateObject var calorieCalculatorModel: СalorieCalculatorViewModel
+    @StateObject var realmServiceWorkout = RealmServiceWorkout.shared
+    @StateObject var realmServiceExercise = RealmServiceExercise.shared
     var viewModel: MainTabBarViewModel
     var body: some View {
         TabView {
-            //to do:
-//            WorkoutView(items: CreateAWorkoutViewModel(createAWorkoutModel: WorkoutModel(name: "")))
-//                .tabItem {
-//                    VStack {
-//                        Image (systemName: "bolt.heart.fill")
-//                        Text ("WORKOUT")
-//                    }
-//                }
+            WorkoutView()
+                .environmentObject(RealmServiceWorkout.shared)
+                .environmentObject(RealmServiceExercise.shared)
+                .tabItem {
+                    VStack {
+                        Image (systemName: "bolt.heart.fill")
+                        Text ("WORKOUT")
+                    }
+                }
             CalorieCalculatorView(viewСalorieCalculatorViewModel: СalorieCalculatorViewModel(calorieCalculatorModel: CalorieCalculatorModel(adgeCalculator: "", theWeightCalculator: "", growthCalculator: "", genderCalculator: "", physicalActivityCalculator: "")))
                 .tabItem {
                     VStack {
                         Image (systemName: "plus.forwardslash.minus")
                         Text ("СALORIE CALCULATOR")
                     }
-                    
                 }
             AccauntView (viewModelUser: AccauntViewSettingsViewModel(profileUser: UserDB(id: "\(viewModelUser.profileUser.id)", nameUser: "\(viewModelUser.profileUser.nameUser)", adgeUser: "\(viewModelUser.profileUser.adgeUser)", theWeightUesr: "\(viewModelUser.profileUser.theWeightUesr)", growthUser: "\(viewModelUser.profileUser.growthUser)", physicalActivityUser: "\(viewModelUser.profileUser.physicalActivityUser)", genderUser: "\(viewModelUser.profileUser.genderUser)")))
                 .tabItem {
@@ -40,6 +42,7 @@ struct MainTadView: View {
         }
         .onAppear{
             self.viewModelUser.getUserViewModel()
+            self.realmServiceWorkout.getWorkout()
         }
     }
 }

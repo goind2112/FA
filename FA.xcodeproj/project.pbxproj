@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E8313D03288351E700B1867A /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8313D02288351E600B1867A /* Exercise.swift */; };
-		E8313D05288361F600B1867A /* CreateAWorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8313D04288361F600B1867A /* CreateAWorkoutViewModel.swift */; };
-		E849BB2B28A0003200569598 /* ExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849BB2A28A0003200569598 /* ExerciseViewModel.swift */; };
+		E845ED7B28B7021200EE774C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E845ED7A28B7021200EE774C /* IQKeyboardManagerSwift */; };
 		E84FF6072868AC57007734E8 /* CreateAWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FF6062868AC57007734E8 /* CreateAWorkout.swift */; };
 		E8644A46286CDB4B00F64A63 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E8644A45286CDB4B00F64A63 /* FirebaseAuth */; };
 		E8644A48286CDB4B00F64A63 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E8644A47286CDB4B00F64A63 /* FirebaseFirestore */; };
@@ -31,6 +30,11 @@
 		E8A63F9E2874A65700CA1587 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A63F9D2874A65700CA1587 /* AuthService.swift */; };
 		E8A63FA0287A07AD00CA1587 /* AccauntViewSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A63F9F287A07AD00CA1587 /* AccauntViewSettingsViewModel.swift */; };
 		E8A88CC42899727D00DACC50 /* CreateAExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A88CC32899727D00DACC50 /* CreateAExercise.swift */; };
+		E8A8D6CC28A472060051DA3C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E8A8D6CB28A472060051DA3C /* Realm */; };
+		E8A8D6CE28A472060051DA3C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E8A8D6CD28A472060051DA3C /* RealmSwift */; };
+		E8A8D6D028A472E30051DA3C /* RealmServiceExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A8D6CF28A472E30051DA3C /* RealmServiceExercise.swift */; };
+		E8A8D6D228A558F60051DA3C /* RealmServiceWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A8D6D128A558F60051DA3C /* RealmServiceWorkout.swift */; };
+		E8A8D6D428A562BE0051DA3C /* addWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A8D6D328A562BE0051DA3C /* addWorkout.swift */; };
 		E8C6DA2C284BF77E00769959 /* FAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6DA2B284BF77E00769959 /* FAApp.swift */; };
 		E8C6DA2E284BF77E00769959 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6DA2D284BF77E00769959 /* LoginScreen.swift */; };
 		E8C6DA30284BF77F00769959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C6DA2F284BF77F00769959 /* Assets.xcassets */; };
@@ -41,8 +45,6 @@
 
 /* Begin PBXFileReference section */
 		E8313D02288351E600B1867A /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
-		E8313D04288361F600B1867A /* CreateAWorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAWorkoutViewModel.swift; sourceTree = "<group>"; };
-		E849BB2A28A0003200569598 /* ExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewModel.swift; sourceTree = "<group>"; };
 		E84FF6062868AC57007734E8 /* CreateAWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAWorkout.swift; sourceTree = "<group>"; };
 		E86B35192858DE1300E46A75 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		E86B353C285B939900E46A75 /* InfoListPhysicalActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoListPhysicalActivity.swift; sourceTree = "<group>"; };
@@ -62,6 +64,9 @@
 		E8A63F9D2874A65700CA1587 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E8A63F9F287A07AD00CA1587 /* AccauntViewSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccauntViewSettingsViewModel.swift; sourceTree = "<group>"; };
 		E8A88CC32899727D00DACC50 /* CreateAExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAExercise.swift; sourceTree = "<group>"; };
+		E8A8D6CF28A472E30051DA3C /* RealmServiceExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceExercise.swift; sourceTree = "<group>"; };
+		E8A8D6D128A558F60051DA3C /* RealmServiceWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceWorkout.swift; sourceTree = "<group>"; };
+		E8A8D6D328A562BE0051DA3C /* addWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addWorkout.swift; sourceTree = "<group>"; };
 		E8C6DA28284BF77E00769959 /* FA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C6DA2B284BF77E00769959 /* FAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAApp.swift; sourceTree = "<group>"; };
 		E8C6DA2D284BF77E00769959 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -78,40 +83,16 @@
 			files = (
 				E8644A46286CDB4B00F64A63 /* FirebaseAuth in Frameworks */,
 				E8644A48286CDB4B00F64A63 /* FirebaseFirestore in Frameworks */,
+				E8A8D6CC28A472060051DA3C /* Realm in Frameworks */,
+				E8A8D6CE28A472060051DA3C /* RealmSwift in Frameworks */,
 				E8644A4A286CDB4B00F64A63 /* FirebaseStorage in Frameworks */,
+				E845ED7B28B7021200EE774C /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E849BB2C28A0585300569598 /* To do */ = {
-			isa = PBXGroup;
-			children = (
-				E849BB2E28A058B600569598 /* ViewModelWorkout */,
-				E849BB2D28A0587600569598 /* ExerciseComponents */,
-				E84FF6052868AC32007734E8 /* Workout */,
-			);
-			path = "To do";
-			sourceTree = "<group>";
-		};
-		E849BB2D28A0587600569598 /* ExerciseComponents */ = {
-			isa = PBXGroup;
-			children = (
-				E878EA6A288C83A100186AE2 /* ExerciseCell.swift */,
-			);
-			path = ExerciseComponents;
-			sourceTree = "<group>";
-		};
-		E849BB2E28A058B600569598 /* ViewModelWorkout */ = {
-			isa = PBXGroup;
-			children = (
-				E8313D04288361F600B1867A /* CreateAWorkoutViewModel.swift */,
-				E849BB2A28A0003200569598 /* ExerciseViewModel.swift */,
-			);
-			path = ViewModelWorkout;
-			sourceTree = "<group>";
-		};
 		E84FF5FE2868A220007734E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				E870575A286A1841006AF2EF /* ButtonWorkout.swift */,
+				E878EA6A288C83A100186AE2 /* ExerciseCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -145,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				E87961BE285114BE0011C401 /* WorkoutView.swift */,
+				E8A8D6D328A562BE0051DA3C /* addWorkout.swift */,
 				E84FF6062868AC57007734E8 /* CreateAWorkout.swift */,
 				E8A88CC32899727D00DACC50 /* CreateAExercise.swift */,
 			);
@@ -175,6 +158,8 @@
 			children = (
 				E8A63F9B28749DC300CA1587 /* DatabaseService.swift */,
 				E8A63F9D2874A65700CA1587 /* AuthService.swift */,
+				E8A8D6CF28A472E30051DA3C /* RealmServiceExercise.swift */,
+				E8A8D6D128A558F60051DA3C /* RealmServiceWorkout.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -184,10 +169,19 @@
 			children = (
 				E87961B7285109DD0011C401 /* MainTadView.swift */,
 				E86B35132858DD3000E46A75 /* Accaunt */,
-				E87961BC285114A50011C401 /* СalorieCalculatorView.swift */,
+				E8A8D6C928A46FA00051DA3C /* СalorieCalculator */,
+				E84FF6052868AC32007734E8 /* Workout */,
 				E84FF6022868A7E5007734E8 /* Components */,
 			);
 			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		E8A8D6C928A46FA00051DA3C /* СalorieCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				E87961BC285114A50011C401 /* СalorieCalculatorView.swift */,
+			);
+			path = "СalorieCalculator";
 			sourceTree = "<group>";
 		};
 		E8C6DA1F284BF77E00769959 = {
@@ -216,7 +210,6 @@
 				E84FF5FE2868A220007734E8 /* View */,
 				E870575D286A1AD6006AF2EF /* ConstantsExtension.swift */,
 				E86B353C285B939900E46A75 /* InfoListPhysicalActivity.swift */,
-				E849BB2C28A0585300569598 /* To do */,
 				E8C6DA2F284BF77F00769959 /* Assets.xcassets */,
 				E8705767286C9DA3006AF2EF /* GoogleService-Info.plist */,
 				E8C6DA31284BF77F00769959 /* Preview Content */,
@@ -252,6 +245,9 @@
 				E8644A45286CDB4B00F64A63 /* FirebaseAuth */,
 				E8644A47286CDB4B00F64A63 /* FirebaseFirestore */,
 				E8644A49286CDB4B00F64A63 /* FirebaseStorage */,
+				E8A8D6CB28A472060051DA3C /* Realm */,
+				E8A8D6CD28A472060051DA3C /* RealmSwift */,
+				E845ED7A28B7021200EE774C /* IQKeyboardManagerSwift */,
 			);
 			productName = FA;
 			productReference = E8C6DA28284BF77E00769959 /* FA.app */;
@@ -283,6 +279,8 @@
 			mainGroup = E8C6DA1F284BF77E00769959;
 			packageReferences = (
 				E8644A44286CDB4B00F64A63 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E8A8D6CA28A472060051DA3C /* XCRemoteSwiftPackageReference "realm-swift" */,
+				E845ED7928B7021200EE774C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = E8C6DA29284BF77E00769959 /* Products */;
 			projectDirPath = "";
@@ -317,11 +315,9 @@
 				E87961B8285109DD0011C401 /* MainTadView.swift in Sources */,
 				E8C6DA2C284BF77E00769959 /* FAApp.swift in Sources */,
 				E8705760286A2482006AF2EF /* WorkoutModel.swift in Sources */,
-				E849BB2B28A0003200569598 /* ExerciseViewModel.swift in Sources */,
 				E84FF6072868AC57007734E8 /* CreateAWorkout.swift in Sources */,
 				E8A63F9C28749DC400CA1587 /* DatabaseService.swift in Sources */,
 				E8A63FA0287A07AD00CA1587 /* AccauntViewSettingsViewModel.swift in Sources */,
-				E8313D05288361F600B1867A /* CreateAWorkoutViewModel.swift in Sources */,
 				E8A63F982874886300CA1587 /* UserDBModel.swift in Sources */,
 				E8E4E3B5287F525300F3E123 /* CalorieCalculatorModel.swift in Sources */,
 				E87961BD285114A50011C401 /* СalorieCalculatorView.swift in Sources */,
@@ -333,7 +329,10 @@
 				E87961BF285114BE0011C401 /* WorkoutView.swift in Sources */,
 				E878EA6B288C83A100186AE2 /* ExerciseCell.swift in Sources */,
 				E8A63F9E2874A65700CA1587 /* AuthService.swift in Sources */,
+				E8A8D6D028A472E30051DA3C /* RealmServiceExercise.swift in Sources */,
+				E8A8D6D228A558F60051DA3C /* RealmServiceWorkout.swift in Sources */,
 				E8A63F9A287499DE00CA1587 /* MainTabBarViewModel.swift in Sources */,
+				E8A8D6D428A562BE0051DA3C /* addWorkout.swift in Sources */,
 				E870575E286A1AD6006AF2EF /* ConstantsExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,6 +538,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E845ED7928B7021200EE774C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.10;
+			};
+		};
 		E8644A44286CDB4B00F64A63 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -547,9 +554,22 @@
 				kind = branch;
 			};
 		};
+		E8A8D6CA28A472060051DA3C /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E845ED7A28B7021200EE774C /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E845ED7928B7021200EE774C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		E8644A45286CDB4B00F64A63 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E8644A44286CDB4B00F64A63 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -564,6 +584,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E8644A44286CDB4B00F64A63 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		E8A8D6CB28A472060051DA3C /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E8A8D6CA28A472060051DA3C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		E8A8D6CD28A472060051DA3C /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E8A8D6CA28A472060051DA3C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

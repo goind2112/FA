@@ -30,7 +30,7 @@ struct CalorieCalculatorView: View {
             Spacer()
             ScrollView{
                 VStack {
-                    //Возраст
+                    
                     HStack {
                         Text ("Возраст:")
                             .font(.title2)
@@ -42,7 +42,7 @@ struct CalorieCalculatorView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(5)
-                    //Пол
+                    
                     HStack {
                         Text ("Пол")
                             .font(.system(size: 20))
@@ -67,7 +67,7 @@ struct CalorieCalculatorView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(5)
-                    //Вес
+                   
                     HStack {
                         Text ("Вес:")
                             .font(.title2)
@@ -79,7 +79,7 @@ struct CalorieCalculatorView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(5)
-                    //Рост
+                    
                     HStack {
                         Text ("Рост:")
                             .font(.title2)

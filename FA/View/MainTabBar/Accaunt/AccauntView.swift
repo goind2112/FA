@@ -20,7 +20,7 @@ struct AccauntView: View {
     var body: some View {
         
         VStack {
-            // настройки
+           
             HStack {
                 Button  {
                     settingsOpen.toggle()
@@ -41,7 +41,7 @@ struct AccauntView: View {
             }
             .padding()
             ScrollView (.vertical, showsIndicators: false) {
-                // фото и имя
+                
                 VStack {Image (systemName: "person.fill")
                         .resizable()
                         .padding()
@@ -53,7 +53,7 @@ struct AccauntView: View {
                     
                 }
                 .padding(.vertical)
-                // Данные пользователя
+                
                 VStack {
                     HStack {
                         Text ("Данные пользователя")
@@ -78,7 +78,7 @@ struct AccauntView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(5)
                     
-                    //Возраст
+                   
                     HStack {
                         Text ("Возраст:")
                             .font(.system(size: 20))
@@ -87,7 +87,7 @@ struct AccauntView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(5)
-                    //Пол
+                    
                     HStack {
                         Text ("Пол:")
                             .font(.system(size: 20))
@@ -95,7 +95,7 @@ struct AccauntView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(5)
-                    //Вес
+                   
                     HStack {
                         Text ("Вес:")
                             .font(.system(size: 20))
@@ -104,7 +104,7 @@ struct AccauntView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(5)
-                    //Рост
+                    
                     HStack {
                         Text ("Рост:")
                             .font(.system(size: 20))
@@ -163,29 +163,29 @@ struct AccauntView: View {
                     
                 }
                 .padding()
-                // Цель
-                VStack {
-                    Text ("Установи себе цель !")
-                        .font(.system(size: 25))
-                        .padding(5)
-                    Text ("Установи для себя цель по снижению веса, и достигни её.")
-                    Button(action: {
-                        //
-                    }) {
-                        Text("Создать цель")
-                            .foregroundColor(.gray)
-                            .fontWeight(.bold)
-                            .padding(.vertical)
-                            .padding(.horizontal, 50)
-                            .background(.white)
-                            .clipShape(Capsule())
-                    }
-                    .padding()
-                }
-                .frame(maxWidth: .infinity)
-                .background(Color.blue)
-                .cornerRadius(35)
-                .padding()
+                // to do: Цель
+//                VStack {
+//                    Text ("Установи себе цель !")
+//                        .font(.system(size: 25))
+//                        .padding(5)
+//                    Text ("Установи для себя цель по снижению веса, и достигни её.")
+//                    Button(action: {
+//                        //
+//                    }) {
+//                        Text("Создать цель")
+//                            .foregroundColor(.gray)
+//                            .fontWeight(.bold)
+//                            .padding(.vertical)
+//                            .padding(.horizontal, 50)
+//                            .background(.white)
+//                            .clipShape(Capsule())
+//                    }
+//                    .padding()
+//                }
+//                .frame(maxWidth: .infinity)
+//                .background(Color.blue)
+//                .cornerRadius(35)
+//                .padding()
             }
         }
         .background(Color.offWhite)

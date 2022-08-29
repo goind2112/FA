@@ -8,20 +8,36 @@
 import SwiftUI
 
 struct ButtonWorkout: View {
-    var workoutModel: WorkoutModel
+    
+    @State private var showCreateWorkout = false
+    @EnvironmentObject var realmServiceExercise: RealmServiceExercise
+    @EnvironmentObject var realmServiceWorkout: RealmServiceWorkout
+    
+    var name: String
+    
     var body: some View {
-        Button  {
-            //
-        } label: {
-            Text (workoutModel.name)
+        VStack {
+            Button  {
+                showCreateWorkout.toggle()
+                realmServiceWorkout.workoutTransferId(name: name)
+                realmServiceExercise.getExercise(workoutId: realmServiceWorkout.workoutId)
+                print("------\(realmServiceExercise.exerciseArray)----------------")
+            } label: {
+                Text (name)
+                    .foregroundColor(.black)
+            }
+        }
+        .fullScreenCover(isPresented: $showCreateWorkout) {
+            CreateAWorkout()
+                .environmentObject(RealmServiceExercise.shared)
         }
     }
-    }
+}
 
 
 
 struct ButtonWorkoutViewModel_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonWorkout(workoutModel: WorkoutModel(name: "понедельник"))
+        ButtonWorkout(name: "понедельник")
     }
 }

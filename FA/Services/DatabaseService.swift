@@ -17,63 +17,8 @@ class DatabaseService {
     private var usersRef: CollectionReference {
         return db.collection("users")
     }
-    // to do:
-//    var workoutRef: CollectionReference {
-//        return db.collection("workouts")
-//    }
-    
     private init() { }
-    // to do: 
-//    func getCreateAWorkout (by userID: String, complettion: @escaping (Result<[Exercise], Error>)-> ()) {
-//        self.workoutRef.getDocuments { qSnap, error in
-//            if let qSnap = qSnap {
-//                var workouts = [Exercise]()
-//                for doc in qSnap.documents {
-//                    if let workout = Exercise(doc: doc), workout.usreID == userID{
-//                        workouts.append(workout)
-//                    }
-//                }
-//                complettion(.success(workouts))
-//            } else if let error = error {
-//                complettion(.failure(error))
-//            }
-//        }
-//    }
-//
     
-//    func setWorkout (workout: WorkoutModel,
-//                     complettion: @escaping (Result<WorkoutModel, Error>)-> ()) {
-//        workoutRef.document(workout.id).setData(workout.representationWorkoutModel) {error in
-//            if let error = error {
-//                complettion(.failure(error))
-//            } else {
-//                self.setExercises(to: workout.id,
-//                                  exercises: workout.exerciseWorkoutModel) { result in
-//                    switch result {
-//
-//                    case .success(let exercise):
-//                        print(exercise.count)
-//                        complettion(.success(workout))
-//                    case .failure(let error):
-//                        print(error.localizedDescription)
-//                    }
-//                }
-//            }
-//        }
-//    }
-    
-//    func setExercises (to workoutId: String,
-//                      exercises: [Exercise],
-//                      complettion: @escaping (Result<[Exercise], Error>)-> ()) {
-//        let exerciseRef = workoutRef.document(workoutId).collection("exercises")
-//
-//        for exercise in exercises {
-//            exerciseRef.document(String(exercise.id)).setData(exercise.representationExercise)
-//        }
-//        complettion(.success(exercises))
-//    }
-    
-
     func createUserDB(user: UserDB, completion: @escaping (Result<UserDB,Error>) -> ()) {
         usersRef.document(user.id).setData(user.representationUserDB) { error in
             if let error = error {

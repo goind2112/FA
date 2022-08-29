@@ -46,6 +46,7 @@ struct Settings: View {
             .padding(5)
             ScrollView {
                 VStack {
+                    //to do: image update
                     Button  {
                         //
                     } label: {
@@ -63,7 +64,7 @@ struct Settings: View {
                         .padding(5)
                         .background()
                         .cornerRadius(15)
-                    // Данные пользователяsd
+                    
                     VStack {
                         HStack {
                             Text ("Данные пользователя")
@@ -71,7 +72,7 @@ struct Settings: View {
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(5)
-                        //Возраст
+                        
                         HStack {
                             Text ("Возраст:")
                                 .font(.system(size: 20))
@@ -83,7 +84,7 @@ struct Settings: View {
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(5)
-                        //Пол
+                        
                         HStack {
                             Text ("Пол")
                                 .font(.system(size: 20))
@@ -110,7 +111,6 @@ struct Settings: View {
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(5)
-                        //Вес
                         HStack {
                             Text ("Вес:")
                                 .font(.system(size: 20))
@@ -122,7 +122,6 @@ struct Settings: View {
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(5)
-                        //Рост
                         HStack {
                             Text ("Рост:")
                                 .font(.system(size: 20))
@@ -152,17 +151,17 @@ struct Settings: View {
                         .padding(5)
                         Menu {
                             Picker ("degreeOfPhysicalActivity", selection: $viewModelUser.profileUser.physicalActivityUser) {
-                        
+                                
                                 Text(degreeOfPhysicalActivity.minimum.rawValue).tag( degreeOfPhysicalActivity.minimum.rawValue)
-                                    
-                                    Text(degreeOfPhysicalActivity.weakActivity.rawValue).tag(degreeOfPhysicalActivity.weakActivity.rawValue)
-                                    
-                                    Text(degreeOfPhysicalActivity.averageActivity.rawValue).tag(degreeOfPhysicalActivity.averageActivity.rawValue)
-                                    
-                                    Text(degreeOfPhysicalActivity.highActivity.rawValue).tag(degreeOfPhysicalActivity.highActivity.rawValue)
-
-                                    Text(degreeOfPhysicalActivity.veryHighActivity.rawValue).tag(degreeOfPhysicalActivity.veryHighActivity.rawValue)
-                                }
+                                
+                                Text(degreeOfPhysicalActivity.weakActivity.rawValue).tag(degreeOfPhysicalActivity.weakActivity.rawValue)
+                                
+                                Text(degreeOfPhysicalActivity.averageActivity.rawValue).tag(degreeOfPhysicalActivity.averageActivity.rawValue)
+                                
+                                Text(degreeOfPhysicalActivity.highActivity.rawValue).tag(degreeOfPhysicalActivity.highActivity.rawValue)
+                                
+                                Text(degreeOfPhysicalActivity.veryHighActivity.rawValue).tag(degreeOfPhysicalActivity.veryHighActivity.rawValue)
+                            }
                         } label: {
                             Label("\(viewModelUser.profileUser.physicalActivityUser)", systemImage: "person.crop.circle.badge.questionmark.fill")
                                 .font(.system(size: 20))
@@ -170,10 +169,6 @@ struct Settings: View {
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(5)
-                        
-                        
-                        
-                        
                         
                         Button {
                             tabViewBack.toggle()
