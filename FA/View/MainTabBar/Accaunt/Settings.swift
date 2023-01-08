@@ -205,12 +205,6 @@ struct Settings: View {
     }
 }
 
-
-
-
-
-
-
 struct Settings_Previews: PreviewProvider {
     static var previews: some View {
         Settings(viewModelUser: AccauntViewSettingsViewModel(profileUser: UserDB(id: "", nameUser: "", adgeUser: "", theWeightUesr: "", growthUser: "", physicalActivityUser: degreeOfPhysicalActivity.minimum.rawValue, genderUser: sex.male.rawValue)))

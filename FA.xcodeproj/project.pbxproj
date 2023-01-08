@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E8313D03288351E700B1867A /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8313D02288351E600B1867A /* Exercise.swift */; };
+		E8313D03288351E700B1867A /* ExerciseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8313D02288351E600B1867A /* ExerciseModel.swift */; };
 		E845ED7B28B7021200EE774C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E845ED7A28B7021200EE774C /* IQKeyboardManagerSwift */; };
 		E84FF6072868AC57007734E8 /* CreateAWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FF6062868AC57007734E8 /* CreateAWorkout.swift */; };
 		E8644A46286CDB4B00F64A63 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E8644A45286CDB4B00F64A63 /* FirebaseAuth */; };
@@ -15,11 +15,11 @@
 		E8644A4A286CDB4B00F64A63 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E8644A49286CDB4B00F64A63 /* FirebaseStorage */; };
 		E86B351A2858DE1300E46A75 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B35192858DE1300E46A75 /* Settings.swift */; };
 		E86B353D285B939900E46A75 /* InfoListPhysicalActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B353C285B939900E46A75 /* InfoListPhysicalActivity.swift */; };
-		E870575B286A1841006AF2EF /* ButtonWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E870575A286A1841006AF2EF /* ButtonWorkout.swift */; };
+		E870575B286A1841006AF2EF /* WorkoutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E870575A286A1841006AF2EF /* WorkoutRow.swift */; };
 		E870575E286A1AD6006AF2EF /* ConstantsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E870575D286A1AD6006AF2EF /* ConstantsExtension.swift */; };
 		E8705760286A2482006AF2EF /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E870575F286A2482006AF2EF /* WorkoutModel.swift */; };
 		E8705768286C9DA3006AF2EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8705767286C9DA3006AF2EF /* GoogleService-Info.plist */; };
-		E878EA6B288C83A100186AE2 /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E878EA6A288C83A100186AE2 /* ExerciseCell.swift */; };
+		E878EA6B288C83A100186AE2 /* ExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E878EA6A288C83A100186AE2 /* ExerciseRow.swift */; };
 		E87961B8285109DD0011C401 /* MainTadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87961B7285109DD0011C401 /* MainTadView.swift */; };
 		E87961BB285114340011C401 /* AccauntView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87961BA285114340011C401 /* AccauntView.swift */; };
 		E87961BD285114A50011C401 /* СalorieCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87961BC285114A50011C401 /* СalorieCalculatorView.swift */; };
@@ -34,7 +34,7 @@
 		E8A8D6CE28A472060051DA3C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E8A8D6CD28A472060051DA3C /* RealmSwift */; };
 		E8A8D6D028A472E30051DA3C /* RealmServiceExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A8D6CF28A472E30051DA3C /* RealmServiceExercise.swift */; };
 		E8A8D6D228A558F60051DA3C /* RealmServiceWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A8D6D128A558F60051DA3C /* RealmServiceWorkout.swift */; };
-		E8A8D6D428A562BE0051DA3C /* addWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A8D6D328A562BE0051DA3C /* addWorkout.swift */; };
+		E8A8D6D428A562BE0051DA3C /* AddWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A8D6D328A562BE0051DA3C /* AddWorkout.swift */; };
 		E8C6DA2C284BF77E00769959 /* FAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6DA2B284BF77E00769959 /* FAApp.swift */; };
 		E8C6DA2E284BF77E00769959 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6DA2D284BF77E00769959 /* LoginScreen.swift */; };
 		E8C6DA30284BF77F00769959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C6DA2F284BF77F00769959 /* Assets.xcassets */; };
@@ -44,15 +44,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E8313D02288351E600B1867A /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		E8313D02288351E600B1867A /* ExerciseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModel.swift; sourceTree = "<group>"; };
 		E84FF6062868AC57007734E8 /* CreateAWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAWorkout.swift; sourceTree = "<group>"; };
 		E86B35192858DE1300E46A75 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		E86B353C285B939900E46A75 /* InfoListPhysicalActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoListPhysicalActivity.swift; sourceTree = "<group>"; };
-		E870575A286A1841006AF2EF /* ButtonWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWorkout.swift; sourceTree = "<group>"; };
+		E870575A286A1841006AF2EF /* WorkoutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRow.swift; sourceTree = "<group>"; };
 		E870575D286A1AD6006AF2EF /* ConstantsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsExtension.swift; sourceTree = "<group>"; };
 		E870575F286A2482006AF2EF /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 		E8705767286C9DA3006AF2EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E878EA6A288C83A100186AE2 /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
+		E878EA6A288C83A100186AE2 /* ExerciseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRow.swift; sourceTree = "<group>"; };
 		E87961B7285109DD0011C401 /* MainTadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTadView.swift; sourceTree = "<group>"; };
 		E87961BA285114340011C401 /* AccauntView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccauntView.swift; sourceTree = "<group>"; };
 		E87961BC285114A50011C401 /* СalorieCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СalorieCalculatorView.swift"; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		E8A88CC32899727D00DACC50 /* CreateAExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAExercise.swift; sourceTree = "<group>"; };
 		E8A8D6CF28A472E30051DA3C /* RealmServiceExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceExercise.swift; sourceTree = "<group>"; };
 		E8A8D6D128A558F60051DA3C /* RealmServiceWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceWorkout.swift; sourceTree = "<group>"; };
-		E8A8D6D328A562BE0051DA3C /* addWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addWorkout.swift; sourceTree = "<group>"; };
+		E8A8D6D328A562BE0051DA3C /* AddWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkout.swift; sourceTree = "<group>"; };
 		E8C6DA28284BF77E00769959 /* FA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C6DA2B284BF77E00769959 /* FAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAApp.swift; sourceTree = "<group>"; };
 		E8C6DA2D284BF77E00769959 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				E870575F286A2482006AF2EF /* WorkoutModel.swift */,
-				E8313D02288351E600B1867A /* Exercise.swift */,
+				E8313D02288351E600B1867A /* ExerciseModel.swift */,
 				E8E4E3B4287F525300F3E123 /* CalorieCalculatorModel.swift */,
 				E8A63F972874886300CA1587 /* UserDBModel.swift */,
 			);
@@ -117,8 +117,8 @@
 		E84FF6022868A7E5007734E8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E870575A286A1841006AF2EF /* ButtonWorkout.swift */,
-				E878EA6A288C83A100186AE2 /* ExerciseCell.swift */,
+				E870575A286A1841006AF2EF /* WorkoutRow.swift */,
+				E878EA6A288C83A100186AE2 /* ExerciseRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				E87961BE285114BE0011C401 /* WorkoutView.swift */,
-				E8A8D6D328A562BE0051DA3C /* addWorkout.swift */,
+				E8A8D6D328A562BE0051DA3C /* AddWorkout.swift */,
 				E84FF6062868AC57007734E8 /* CreateAWorkout.swift */,
 				E8A88CC32899727D00DACC50 /* CreateAExercise.swift */,
 			);
@@ -172,6 +172,7 @@
 				E8A8D6C928A46FA00051DA3C /* СalorieCalculator */,
 				E84FF6052868AC32007734E8 /* Workout */,
 				E84FF6022868A7E5007734E8 /* Components */,
+				E86B353C285B939900E46A75 /* InfoListPhysicalActivity.swift */,
 			);
 			path = MainTabBar;
 			sourceTree = "<group>";
@@ -209,7 +210,6 @@
 				E84FF5FF2868A274007734E8 /* Model */,
 				E84FF5FE2868A220007734E8 /* View */,
 				E870575D286A1AD6006AF2EF /* ConstantsExtension.swift */,
-				E86B353C285B939900E46A75 /* InfoListPhysicalActivity.swift */,
 				E8C6DA2F284BF77F00769959 /* Assets.xcassets */,
 				E8705767286C9DA3006AF2EF /* GoogleService-Info.plist */,
 				E8C6DA31284BF77F00769959 /* Preview Content */,
@@ -322,17 +322,17 @@
 				E8E4E3B5287F525300F3E123 /* CalorieCalculatorModel.swift in Sources */,
 				E87961BD285114A50011C401 /* СalorieCalculatorView.swift in Sources */,
 				E86B351A2858DE1300E46A75 /* Settings.swift in Sources */,
-				E8313D03288351E700B1867A /* Exercise.swift in Sources */,
+				E8313D03288351E700B1867A /* ExerciseModel.swift in Sources */,
 				E8E4E3B3287F516D00F3E123 /* СalorieCalculatorViewModel.swift in Sources */,
 				E87961BB285114340011C401 /* AccauntView.swift in Sources */,
-				E870575B286A1841006AF2EF /* ButtonWorkout.swift in Sources */,
+				E870575B286A1841006AF2EF /* WorkoutRow.swift in Sources */,
 				E87961BF285114BE0011C401 /* WorkoutView.swift in Sources */,
-				E878EA6B288C83A100186AE2 /* ExerciseCell.swift in Sources */,
+				E878EA6B288C83A100186AE2 /* ExerciseRow.swift in Sources */,
 				E8A63F9E2874A65700CA1587 /* AuthService.swift in Sources */,
 				E8A8D6D028A472E30051DA3C /* RealmServiceExercise.swift in Sources */,
 				E8A8D6D228A558F60051DA3C /* RealmServiceWorkout.swift in Sources */,
 				E8A63F9A287499DE00CA1587 /* MainTabBarViewModel.swift in Sources */,
-				E8A8D6D428A562BE0051DA3C /* addWorkout.swift in Sources */,
+				E8A8D6D428A562BE0051DA3C /* AddWorkout.swift in Sources */,
 				E870575E286A1AD6006AF2EF /* ConstantsExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +471,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +479,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = going.com.FA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -501,6 +505,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -508,6 +513,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = going.com.FA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

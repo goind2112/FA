@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct addWorkout: View {
+struct AddWorkout: View {
     
-   @EnvironmentObject var realmServiceWorkout: RealmServiceWorkout
-   @State private var name: String = ""
+    @EnvironmentObject var realmServiceWorkout: RealmServiceWorkout
+    @State private var name: String = ""
     @Environment(\.dismiss) var dismiss
     var body: some View {
         VStack {
             
-        Text("Создай тренировку")
+            Text("Создай тренировку")
                 .font(.title3).bold()
                 .frame(maxWidth: .infinity, alignment: .leading)
             
@@ -45,9 +45,9 @@ struct addWorkout: View {
     }
 }
 
-struct addWorkout_Previews: PreviewProvider {
+struct AddWorkout_Previews: PreviewProvider {
     static var previews: some View {
-        addWorkout()
+        AddWorkout()
             .environmentObject(RealmServiceWorkout.shared)
             .environmentObject(RealmServiceExercise.shared)
     }

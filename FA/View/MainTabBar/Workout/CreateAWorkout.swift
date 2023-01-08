@@ -15,27 +15,28 @@ struct CreateAWorkout: View {
     @State var isMainTabViewShow = false
     @State var isEditing = false
     @State var showsCreateAExercise = false
+    var columns: [GridItem] = [
+        GridItem(.flexible(minimum: 140)),
+    ]
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack{
-            VStack {
-                Text(self.realmServiceWorkout.workoutName)
+                VStack {
+                    Text(self.realmServiceWorkout.workoutName)
                         .font(.title)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
                         .background(Color.offWhite)
-
-                    List{
-                        ForEach(realmServiceExercise.exerciseArray, id: \.id)
-                        {items in
-                            if !items.isInvalidated {
-                            ExerciseCell(exerciseName: items.exerciseName, exerciseDescription: items.exerciseDescription, exerciseNumberOfRepetitions: items.exerciseNumberOfRepetitions)
-                                .swipeActions(edge: .trailing)
+                    
+                    List {
+                        ForEach(realmServiceExercise.exerciseArray, id: \.id) { item in
+                            if !item.isInvalidated {
+                                ExerciseRow(exerciseName: item.exerciseName, exerciseDescription: item.exerciseDescription, exerciseNumberOfRepetitions: item.exerciseNumberOfRepetitions)
+                                    .swipeActions(edge: .trailing)
                                 {
                                     Button(role: .destructive) {
-                                        realmServiceExercise.deleteExercise(id: items.id, workoutId: items.workoutId)
-                                    
+                                        realmServiceExercise.deleteExercise(id: item.id, workoutId: item.workoutId)
                                     } label: {
                                         Label("Delete", systemImage: "trash")
                                     }
@@ -44,7 +45,9 @@ struct CreateAWorkout: View {
                                 .cornerRadius(12)
                             }
                         }
-                        } .listStyle(.sidebar)
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color.clear)
+                    }
                     .navigationBarTitle("Создание тренировки", displayMode:.inline)
                     .navigationBarItems(leading:  Button {
                         isMainTabViewShow.toggle()
@@ -52,21 +55,21 @@ struct CreateAWorkout: View {
                         Text("Выход")
                             .foregroundColor(.gray)
                         Spacer()
-
+                        
                     }, trailing: Button(action: {
                         showsCreateAExercise = true
                     }, label: {
                         Image(systemName: "plus")  .foregroundColor(.gray)
                     }))
                     .environment(\.editMode, .constant(self.isEditing ? EditMode.active : EditMode.inactive))
-            }
+                }
                 CreateAExercise(showsCreateAExercise: $showsCreateAExercise)
                     .environmentObject(RealmServiceWorkout.shared)
                     .environmentObject(RealmServiceExercise.shared)
                     .offset(y: showsCreateAExercise ?
-                        UIScreen.main.bounds.height / 10
+                            UIScreen.main.bounds.height / 10
                             :
-                        UIScreen.main.bounds.height)
+                                UIScreen.main.bounds.height)
                     .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
             }
             .background(Color.offWhite)
@@ -81,7 +84,7 @@ struct CreateAWorkout: View {
 }
 
 
-struct N_Previews: PreviewProvider {
+struct CreateAWorkout_Previews: PreviewProvider {
     static var previews: some View {
         CreateAWorkout()
             .environmentObject(RealmServiceWorkout.shared)

@@ -14,8 +14,10 @@ class RealmServiceWorkout: ObservableObject {
     @Published private(set) var workoutArray: [WorkoutModel] = []
     @Published private(set) var workoutId = ObjectId()
     @Published private(set) var workoutName = ""
-   private init () {
+    
+    private init () {
         openRealm()
+        getWorkout()
     }
     
     func openRealm() {
@@ -30,6 +32,7 @@ class RealmServiceWorkout: ObservableObject {
             print("Error opening Realme: \(error)")
         }
     }
+    
     func addWorkout (name: String) {
         if let localRealm = localRealmWorkout {
             do {
@@ -44,20 +47,22 @@ class RealmServiceWorkout: ObservableObject {
             }
         }
     }
+    
     func getWorkout () {
         if let localRealm = localRealmWorkout {
             let allWorkout = localRealm.objects(WorkoutModel.self)
             // без  workoutArray = [] error: "Object has been deleted or invalidated." при удалении из массива
             workoutArray = []
-            allWorkout.forEach {workout in
+            allWorkout.forEach { workout in
                 workoutArray.append(workout)
             }
         }
     }
+    
     func updateWorkout(id: ObjectId, name: String) {
         if let localRealm = localRealmWorkout {
             do{
-               let workoutToUpdate = localRealm.objects(WorkoutModel.self).filter(NSPredicate(format: "id == %@", id))
+                let workoutToUpdate = localRealm.objects(WorkoutModel.self).filter(NSPredicate(format: "id == %@", id))
                 guard !workoutToUpdate.isEmpty else {return}
                 
                 try localRealm.write{
@@ -71,29 +76,32 @@ class RealmServiceWorkout: ObservableObject {
             }
         }
     }
+    
     func deleteWorkout(id: ObjectId) {
-        if let localRealm = localRealmWorkout {
-            do {
-                let workoutToDelete = localRealm.objects(WorkoutModel.self).filter(NSPredicate(format: "id == %@", id))
-                 guard !workoutToDelete.isEmpty else {return}
-                
-                try localRealm.write{
-                    localRealm.delete(workoutToDelete)
-                    getWorkout()
-                    print("Delited workout with id \(id)")
+        DispatchQueue.main.async {
+            if let localRealm = self.localRealmWorkout {
+                do {
+                    let workoutToDelete = localRealm.objects(WorkoutModel.self).filter(NSPredicate(format: "id == %@", id))
+                    guard !workoutToDelete.isEmpty else {return}
+                    
+                    try localRealm.write{
+                        localRealm.delete(workoutToDelete)
+                        self.getWorkout()
+                        print("Delited workout with id \(id)")
+                    }
+                    
+                } catch {
+                    print("Error deleting workout \(id) to Realm: \(error)")
                 }
-                
-            } catch {
-                print("Error deleting workout \(id) to Realm: \(error)")
             }
         }
     }
-    func workoutTransferId (name: String) {
+    
+    func workoutTransferId (name: ObjectId) {
         for workoutModel in workoutArray {
-            if  workoutModel.name == name {
+            if  workoutModel.id == name {
                 workoutId = workoutModel.id
-                workoutName = name
-                print("-----------\(name)--\(workoutId)--------------")
+                workoutName = workoutModel.name
             }
         }
     }

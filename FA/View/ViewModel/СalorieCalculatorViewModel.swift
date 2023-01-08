@@ -52,14 +52,14 @@ class СalorieCalculatorViewModel: ObservableObject {
         
         if genderCalculator == "Муж" {
             if calorie < 1400 {
-               calorie = 1400
+                calorie = 1400
             }
         } else {
             if  calorie < 1200 {
                 calorie = 1200
             }
         }
-                
+        
         return calorie
     }
     
@@ -97,10 +97,10 @@ class СalorieCalculatorViewModel: ObservableObject {
         let adge = Double(adgeCalculator) ?? 0
         
         calorie = Int((10 * weight + 6.25 * growth - 5 * adge + sex) * physicalActivity-250)
-       
+        
         if genderCalculator == "Муж" {
             if calorie < 1400 {
-               calorie = 1400
+                calorie = 1400
             }
         } else {
             if  calorie < 1200 {
@@ -148,7 +148,7 @@ class СalorieCalculatorViewModel: ObservableObject {
         
         if genderCalculator == "Муж" {
             if calorie < 1400 {
-               calorie = 1400
+                calorie = 1400
             }
         } else {
             if  calorie < 1200 {

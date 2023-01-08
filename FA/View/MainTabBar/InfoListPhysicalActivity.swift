@@ -138,7 +138,7 @@ B) вы профессиональный спортсмен
     }
 }
 
-struct InfoFisicalActiviti_Previews: PreviewProvider {
+struct InfoListPhysicalActivity_Previews: PreviewProvider {
     static var previews: some View {
         InfoListPhysicalActivity()
     }

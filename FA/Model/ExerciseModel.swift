@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class Exercise: Object, ObjectKeyIdentifiable {
+class ExerciseModel: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var exerciseDescription = ""
     @Persisted var exerciseName = ""

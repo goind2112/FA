@@ -12,7 +12,7 @@ struct MainTadView: View {
     @StateObject var viewModelUser: AccauntViewSettingsViewModel
     @StateObject var calorieCalculatorModel: СalorieCalculatorViewModel
     @StateObject var realmServiceWorkout = RealmServiceWorkout.shared
-    @StateObject var realmServiceExercise = RealmServiceExercise.shared
+    
     var viewModel: MainTabBarViewModel
     var body: some View {
         TabView {

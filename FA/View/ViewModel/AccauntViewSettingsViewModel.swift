@@ -18,7 +18,6 @@ class AccauntViewSettingsViewModel: ObservableObject {
     func setUserViewModel() {
         DatabaseService.sharedDatabase.createUserDB(user: self.profileUser) { result in
             switch result {
-                
             case .success(let user):
                 print("\(user.nameUser)")
             case .failure(let error):
@@ -76,14 +75,14 @@ class AccauntViewSettingsViewModel: ObservableObject {
         
         if genderCalculator == "Муж" {
             if calorie < 1400 {
-               calorie = 1400
+                calorie = 1400
             }
         } else {
             if  calorie < 1200 {
                 calorie = 1200
             }
         }
-                
+        
         return calorie
     }
     
@@ -121,10 +120,10 @@ class AccauntViewSettingsViewModel: ObservableObject {
         let adge = Double(adgeCalculator) ?? 0
         
         calorie = Int((10 * weight + 6.25 * growth - 5 * adge + sex) * physicalActivity-250)
-       
+        
         if genderCalculator == "Муж" {
             if calorie < 1400 {
-               calorie = 1400
+                calorie = 1400
             }
         } else {
             if  calorie < 1200 {
@@ -172,7 +171,7 @@ class AccauntViewSettingsViewModel: ObservableObject {
         
         if genderCalculator == "Муж" {
             if calorie < 1400 {
-               calorie = 1400
+                calorie = 1400
             }
         } else {
             if  calorie < 1200 {

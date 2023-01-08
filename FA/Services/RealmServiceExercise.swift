@@ -12,7 +12,7 @@ import SwiftUI
 class RealmServiceExercise: ObservableObject {
     static let shared = RealmServiceExercise()
     private(set) var localRealm: Realm?
-    @Published private(set) var exerciseArray: [Exercise] = []
+    @Published private(set) var exerciseArray: [ExerciseModel] = []
     
     private init () {
         openRealm()
@@ -35,7 +35,7 @@ class RealmServiceExercise: ObservableObject {
         if let localRealm = localRealm {
             do {
                 try localRealm.write {
-                    let newExercise = Exercise(value: ["exerciseName": exerciseName, "exerciseDescription": exerciseDescription, "exerciseNumberOfRepetitions": exerciseNumberOfRepetitions, "workoutId": workoutId])
+                    let newExercise = ExerciseModel(value: ["exerciseName": exerciseName, "exerciseDescription": exerciseDescription, "exerciseNumberOfRepetitions": exerciseNumberOfRepetitions, "workoutId": workoutId])
                     localRealm.add(newExercise)
                     getExercise(workoutId: workoutId)
                     print("Added new exercise: \(newExercise)")
@@ -45,23 +45,23 @@ class RealmServiceExercise: ObservableObject {
             }
         }
     }
+    
     func getExercise (workoutId: ObjectId) {
-        if let localRealm = localRealm {
-            let allExerciseInWorkout = localRealm.objects(Exercise.self)
-            exerciseArray = []
+        if let localRealm = self.localRealm {
+            let allExerciseInWorkout = localRealm.objects(ExerciseModel.self)
+            self.exerciseArray = []
             allExerciseInWorkout.forEach { exercise in
-                if exercise.workoutId == workoutId {
-                exerciseArray.append(exercise)
+                if exercise.workoutId == workoutId && !exercise.isInvalidated {
+                    self.exerciseArray.append(exercise)
                 }
             }
         }
-        print("-------\(exerciseArray.count)---------")
-}
+    }
     
     func updateExercise(id: ObjectId, exerciseName: String, exerciseDescription: String, exerciseNumberOfRepetitions: String, workoutId: ObjectId) {
         if let localRealm = localRealm {
             do{
-               let exerciseToUpdate = localRealm.objects(Exercise.self).filter(NSPredicate(format: "id == %@", id))
+                let exerciseToUpdate = localRealm.objects(ExerciseModel.self).filter(NSPredicate(format: "id == %@", id))
                 guard !exerciseToUpdate.isEmpty else {return}
                 
                 try localRealm.write{
@@ -77,30 +77,31 @@ class RealmServiceExercise: ObservableObject {
             }
         }
     }
+    
     func deleteExercise(id: ObjectId, workoutId: ObjectId) {
-        if let localRealm = localRealm {
-            do {
-                let exerciseToDelete = localRealm.objects(Exercise.self).filter(NSPredicate(format: "id == %@", id))
-                 guard !exerciseToDelete.isEmpty else {return}
-                
-                try localRealm.write{
-                    localRealm.delete(exerciseToDelete)
-                    getExercise(workoutId: workoutId)
-                    print("Delited exercise with id \(id)")
+        DispatchQueue.main.async {
+            if let localRealm = self.localRealm {
+                do {
+                    let exerciseToDelete = localRealm.objects(ExerciseModel.self).filter(NSPredicate(format: "id == %@", id))
+                    guard !exerciseToDelete.isEmpty else {return}
+                    
+                    try localRealm.write{
+                        localRealm.delete(exerciseToDelete)
+                        self.getExercise(workoutId: workoutId)
+                    }
+                    
+                } catch {
+                    print("Error deleting exercise \(id) to Realm: \(error)")
                 }
-                
-            } catch {
-                print("Error deleting exercise \(id) to Realm: \(error)")
             }
         }
-        
     }
     
     func deleteAllExerciseToWorkoute(workoutId: ObjectId) {
         if let localRealm = localRealm {
             do {
-                let exerciseToDelete = localRealm.objects(Exercise.self).filter(NSPredicate(format: "workoutId == %@", workoutId))
-                 guard !exerciseToDelete.isEmpty else {return}
+                let exerciseToDelete = localRealm.objects(ExerciseModel.self).filter(NSPredicate(format: "workoutId == %@", workoutId))
+                guard !exerciseToDelete.isEmpty else {return}
                 
                 try localRealm.write{
                     localRealm.delete(exerciseToDelete)
@@ -112,6 +113,5 @@ class RealmServiceExercise: ObservableObject {
                 print("Error deleting exercise \(workoutId) to Realm: \(error)")
             }
         }
-        
     }
 }

@@ -10,7 +10,7 @@ import Firebase
 
 class MainTabBarViewModel: ObservableObject {
     @Published var user: User
-
+    
     init(user: User) {
         self.user = user
     }

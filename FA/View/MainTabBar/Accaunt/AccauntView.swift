@@ -20,7 +20,7 @@ struct AccauntView: View {
     var body: some View {
         
         VStack {
-           
+            
             HStack {
                 Button  {
                     settingsOpen.toggle()
@@ -78,7 +78,7 @@ struct AccauntView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(5)
                     
-                   
+                    
                     HStack {
                         Text ("Возраст:")
                             .font(.system(size: 20))
@@ -95,7 +95,7 @@ struct AccauntView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(5)
-                   
+                    
                     HStack {
                         Text ("Вес:")
                             .font(.system(size: 20))
@@ -164,38 +164,38 @@ struct AccauntView: View {
                 }
                 .padding()
                 // to do: Цель
-//                VStack {
-//                    Text ("Установи себе цель !")
-//                        .font(.system(size: 25))
-//                        .padding(5)
-//                    Text ("Установи для себя цель по снижению веса, и достигни её.")
-//                    Button(action: {
-//                        //
-//                    }) {
-//                        Text("Создать цель")
-//                            .foregroundColor(.gray)
-//                            .fontWeight(.bold)
-//                            .padding(.vertical)
-//                            .padding(.horizontal, 50)
-//                            .background(.white)
-//                            .clipShape(Capsule())
-//                    }
-//                    .padding()
-//                }
-//                .frame(maxWidth: .infinity)
-//                .background(Color.blue)
-//                .cornerRadius(35)
-//                .padding()
+                //                VStack {
+                //                    Text ("Установи себе цель !")
+                //                        .font(.system(size: 25))
+                //                        .padding(5)
+                //                    Text ("Установи для себя цель по снижению веса, и достигни её.")
+                //                    Button(action: {
+                //                        //
+                //                    }) {
+                //                        Text("Создать цель")
+                //                            .foregroundColor(.gray)
+                //                            .fontWeight(.bold)
+                //                            .padding(.vertical)
+                //                            .padding(.horizontal, 50)
+                //                            .background(.white)
+                //                            .clipShape(Capsule())
+                //                    }
+                //                    .padding()
+                //                }
+                //                .frame(maxWidth: .infinity)
+                //                .background(Color.blue)
+                //                .cornerRadius(35)
+                //                .padding()
             }
         }
         .background(Color.offWhite)
         .onAppear{
-
+            
             calorieWeightRetention = viewModelUser.calorieManagerWeightRetention(adgeCalculator: viewModelUser.profileUser.adgeUser, theWeightCalculator: viewModelUser.profileUser.theWeightUesr, growthCalculator: viewModelUser.profileUser.growthUser, physicalActivityCalculator: viewModelUser.profileUser.physicalActivityUser, genderCalculator: viewModelUser.profileUser.genderUser)
-
+            
             calorieManagerLoss = viewModelUser.calorieManagerWeightLoss(adgeCalculator: viewModelUser.profileUser.adgeUser, theWeightCalculator: viewModelUser.profileUser.theWeightUesr, growthCalculator: viewModelUser.profileUser.growthUser, physicalActivityCalculator: viewModelUser.profileUser.physicalActivityUser, genderCalculator: viewModelUser.profileUser.genderUser)
-
-           calorieManagerFastLoss = viewModelUser.calorieManagerFastWeightLoss(adgeCalculator: viewModelUser.profileUser.adgeUser, theWeightCalculator: viewModelUser.profileUser.theWeightUesr, growthCalculator: viewModelUser.profileUser.growthUser, physicalActivityCalculator: viewModelUser.profileUser.physicalActivityUser, genderCalculator: viewModelUser.profileUser.genderUser)
+            
+            calorieManagerFastLoss = viewModelUser.calorieManagerFastWeightLoss(adgeCalculator: viewModelUser.profileUser.adgeUser, theWeightCalculator: viewModelUser.profileUser.theWeightUesr, growthCalculator: viewModelUser.profileUser.growthUser, physicalActivityCalculator: viewModelUser.profileUser.physicalActivityUser, genderCalculator: viewModelUser.profileUser.genderUser)
         }
         .fullScreenCover(isPresented: $settingsOpen) {
             Settings(viewModelUser: AccauntViewSettingsViewModel.init(profileUser: UserDB(id: "", nameUser: "", adgeUser: "", theWeightUesr: "", growthUser: "", physicalActivityUser: degreeOfPhysicalActivity.minimum.rawValue, genderUser: sex.male.rawValue)))

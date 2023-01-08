@@ -67,7 +67,7 @@ struct CalorieCalculatorView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(5)
-                   
+                    
                     HStack {
                         Text ("Вес:")
                             .font(.title2)
@@ -83,7 +83,7 @@ struct CalorieCalculatorView: View {
                     HStack {
                         Text ("Рост:")
                             .font(.title2)
-                         TextField ("см", text: self.$growthCalculator)
+                        TextField ("см", text: self.$growthCalculator)
                             .font(.title2)
                             .padding(5)
                             .background()
@@ -111,15 +111,15 @@ struct CalorieCalculatorView: View {
                         Picker ("degreeOfPhysicalActivity", selection: $physicalActivity) {
                             
                             Text(degreeOfPhysicalActivity.minimum.rawValue).tag(degreeOfPhysicalActivity.minimum)
-                                
-                                Text(degreeOfPhysicalActivity.weakActivity.rawValue).tag(degreeOfPhysicalActivity.weakActivity)
-                                
-                                Text(degreeOfPhysicalActivity.averageActivity.rawValue).tag(degreeOfPhysicalActivity.averageActivity)
-                                
-                                Text(degreeOfPhysicalActivity.highActivity.rawValue).tag(degreeOfPhysicalActivity.highActivity)
-
-                                Text(degreeOfPhysicalActivity.veryHighActivity.rawValue).tag(degreeOfPhysicalActivity.veryHighActivity)
-                            }
+                            
+                            Text(degreeOfPhysicalActivity.weakActivity.rawValue).tag(degreeOfPhysicalActivity.weakActivity)
+                            
+                            Text(degreeOfPhysicalActivity.averageActivity.rawValue).tag(degreeOfPhysicalActivity.averageActivity)
+                            
+                            Text(degreeOfPhysicalActivity.highActivity.rawValue).tag(degreeOfPhysicalActivity.highActivity)
+                            
+                            Text(degreeOfPhysicalActivity.veryHighActivity.rawValue).tag(degreeOfPhysicalActivity.veryHighActivity)
+                        }
                     } label: {
                         Label("\(physicalActivity.rawValue)", systemImage: "person.crop.circle.badge.questionmark.fill")
                             .font(.title2)
@@ -127,9 +127,6 @@ struct CalorieCalculatorView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(5)
-                    
-                    
-                    
                     
                     
                     Button {

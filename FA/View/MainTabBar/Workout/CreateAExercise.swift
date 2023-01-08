@@ -56,7 +56,7 @@ struct CreateAExercise: View {
                         .background(.white)
                         .cornerRadius(12)
                         .focused($focused)
-
+                    
                     
                     TextField ("Количество повторений", text: $exerciseNumberOfRepetitions)
                         .font(.system(size: 20))

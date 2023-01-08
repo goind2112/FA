@@ -30,5 +30,5 @@ struct FAApp: App {
             FirebaseApp.configure()
             return true
         }
-    }    
+    }
 }

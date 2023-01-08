@@ -28,50 +28,50 @@ struct LoginScreen: View {
                     Login(index: self.$index)
                 }
                 // To do:
-//                HStack(spacing: 15) {
-//                    Rectangle ()
-//                        .fill (Color("Color"))
-//                        .frame(height: 1)
-//                    Text("OR")
-//                    Rectangle ()
-//                        .fill (Color("Color"))
-//                        .frame(height: 1)
-//                        .border(.red)
-//                }
-//                .padding(.horizontal, 20)
-//                .padding(.top, 50)
-//                // Альтернативная регистрация (вход)
-//                HStack (spacing: 25)
-//                {
-//                    Button(action: {
-//                        //
-//                    }) {
-//                        Image ("Appel")
-//                            .resizable()
-//                            .renderingMode(.original)
-//                            .frame(width: 45, height: 45)
-//                            .clipShape(Circle())
-//                    }
-//                    Button(action: {
-//                        //
-//                    }) {
-//                        Image ("Vk")
-//                            .resizable()
-//                            .renderingMode(.original)
-//                            .frame(width: 45, height: 45)
-//                            .clipShape(Circle())
-//                    }
-//                    Button(action: {
-//                        //
-//                    }) {
-//                        Image ("Google")
-//                            .resizable()
-//                            .renderingMode(.original)
-//                            .frame(width: 45, height: 45)
-//                            .clipShape(Circle())
-//                    }
-//                }
-//                .padding(.top)
+                //                HStack(spacing: 15) {
+                //                    Rectangle ()
+                //                        .fill (Color("Color"))
+                //                        .frame(height: 1)
+                //                    Text("OR")
+                //                    Rectangle ()
+                //                        .fill (Color("Color"))
+                //                        .frame(height: 1)
+                //                        .border(.red)
+                //                }
+                //                .padding(.horizontal, 20)
+                //                .padding(.top, 50)
+                //                // Альтернативная регистрация (вход)
+                //                HStack (spacing: 25)
+                //                {
+                //                    Button(action: {
+                //                        //
+                //                    }) {
+                //                        Image ("Appel")
+                //                            .resizable()
+                //                            .renderingMode(.original)
+                //                            .frame(width: 45, height: 45)
+                //                            .clipShape(Circle())
+                //                    }
+                //                    Button(action: {
+                //                        //
+                //                    }) {
+                //                        Image ("Vk")
+                //                            .resizable()
+                //                            .renderingMode(.original)
+                //                            .frame(width: 45, height: 45)
+                //                            .clipShape(Circle())
+                //                    }
+                //                    Button(action: {
+                //                        //
+                //                    }) {
+                //                        Image ("Google")
+                //                            .resizable()
+                //                            .renderingMode(.original)
+                //                            .frame(width: 45, height: 45)
+                //                            .clipShape(Circle())
+                //                    }
+                //                }
+                //                .padding(.top)
             }
         }
         .padding()
@@ -182,7 +182,7 @@ struct Login: View {
                         
                     case .success(_):
                         UserDefaults.standard.set(true, forKey: "status")
-                                             self.isMainTabViewShow.toggle()
+                        self.isMainTabViewShow.toggle()
                     case .failure(let error):
                         alertMessage = "Oшибка авторизации \(error.localizedDescription)"
                         self.alert.toggle()
@@ -310,29 +310,29 @@ struct Singup: View {
             Button(action: {
                 guard pass == repass else {
                     self.alertMessage = "Ошибка регистрации Passwords do not match"
-                        self.alert.toggle()
+                    self.alert.toggle()
                     return
                 }
                 
-                    AuthService.sharedAuth.singUp(email: self.email,
-                                                  password: self.pass) { result in
-                        switch result {
-                            
-                        case .success(let user):
-                            alertMessage = "Вы зарегистрировались с email \"\(user.email!)\""
-                            self.alert.toggle()
-                            self.index = 0
-                            self.email = ""
-                            self.pass = ""
-                            self.repass = ""
-                            
-                        case .failure(let error):
-                            alertMessage = "Ошибка регистрации \(error.localizedDescription)!"
-                            self.alert.toggle()
-                            UserDefaults.standard.set(true, forKey: "status")
-                            NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
-                        }
+                AuthService.sharedAuth.singUp(email: self.email,
+                                              password: self.pass) { result in
+                    switch result {
+                        
+                    case .success(let user):
+                        alertMessage = "Вы зарегистрировались с email \"\(user.email!)\""
+                        self.alert.toggle()
+                        self.index = 0
+                        self.email = ""
+                        self.pass = ""
+                        self.repass = ""
+                        
+                    case .failure(let error):
+                        alertMessage = "Ошибка регистрации \(error.localizedDescription)!"
+                        self.alert.toggle()
+                        UserDefaults.standard.set(true, forKey: "status")
+                        NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
                     }
+                }
             }){
                 Text ("SINGUP")
                     .foregroundColor(.gray)
@@ -349,7 +349,7 @@ struct Singup: View {
                 
                 Alert(title: Text("Alert"), message: Text("\(alertMessage)"), dismissButton: .default(Text("Ok")))
             }
-         
+            
         }
     }
 }

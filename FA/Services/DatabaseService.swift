@@ -31,7 +31,7 @@ class DatabaseService {
     func getUserDB (completion: @escaping (Result <UserDB, Error>) -> ()) {
         
         usersRef.document(AuthService.sharedAuth.currentUser!.uid).getDocument { docSnapshot, error in
-           
+            
             guard let snap = docSnapshot else {return}
             guard let data = snap.data() else {return}
             guard let id = data["id"] as? String else {return}

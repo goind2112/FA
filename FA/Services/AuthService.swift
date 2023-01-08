@@ -45,7 +45,6 @@ class AuthService {
                 completion(.failure(error))
             }
         }
-        
     }
     
     func singIn (email: String,
